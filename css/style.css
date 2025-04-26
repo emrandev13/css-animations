@@ -1,0 +1,420 @@
+/**
+ Theme Name: Educate - Personal Portfolio Responsive Template
+ Author: Abh Themes
+ Developer: Abdur Rahman
+ Version: 1.0
+ **/
+ 
+/*--------------------------------------------------------------
+>> TABLE OF CONTENTS:
+
+01. Typography
+02. Preloader
+03. Button
+04. Header
+05. Hero
+06.	About
+07.	Service
+08.	Resume
+09.	Portfolio
+10.	Counter
+11.	Pricing  Section 
+12.	Testimonial Section
+13. Blog
+14. Contact us
+15. Footer
+
+
+
+/* ==========================================================================
+				***Typography Area Section***
+   ========================================================================== */
+   
+
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+
+:root {
+	--white: #fff;
+	--dark: #191A23;
+    --black: #000;
+    --Green: #B9FF66;
+    --Grey: #F3F3F3;
+}
+
+/* Typography */
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--black);
+    font-size: 14px;
+    line-height: 26px;
+    font-family: "Space Grotesk", sans-serif;
+    overflow-x: hidden;
+}
+img {
+	max-width: 100%;
+}
+ul {
+	margin:0;
+	padding:0;
+}
+li {
+	list-style:none;
+}
+h1, h2, h1, h3, h4, h5, h6 {
+	margin:0;
+	padding:0;
+    
+    font-style: normal;
+    line-height: normal;
+}
+p {
+	margin:0;
+	padding:0;
+    color: var(--black);
+    font-size: 16px;
+}
+a {
+	text-decoration: none;
+}
+/* Default Spacing */
+.section_padding {
+	padding: 80px 0;
+}
+.pt_140 {
+    padding-top: 140px;
+}
+.pt_0 {
+	padding-top: 0px !important;
+}
+.pb_0 {
+	padding-bottom: 0px !important;
+}
+.mb_0 {
+	margin-bottom: 0px !important;
+}
+.mr_6 {
+    margin-right: 6px;
+}
+.pb_100 {
+	padding-bottom: 100px !important;
+}   
+/* End Default Spacing */
+
+/* start content */
+ body {
+     font-family: 'Inter', sans-serif;
+     margin: 0;
+     padding: 1.5rem;
+     transition: background-color 0.3s, color 0.3s;
+ }
+
+ body.light {
+     background-color: #f4f4f4;
+     color: #111;
+ }
+
+ body.dark {
+     background-color: #111;
+     color: #f4f4f4;
+ }
+
+ h1 {
+     text-align: center;
+     font-size: 2rem;
+     margin-bottom: 1rem;
+ }
+
+ .tabs {
+     max-width: 1000px;
+     margin: 0 auto;
+ }
+
+ .tab-buttons {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 0.5rem;
+     margin-bottom: 1rem;
+ }
+
+ .tab-buttons button {
+     padding: 0.5rem 1rem;
+     border: none;
+     border-radius: 0.5rem;
+     background: #007bff;
+     color: white;
+     cursor: pointer;
+     transition: background 0.3s;
+ }
+
+ .tab-buttons button:hover {
+     background: #0056b3;
+ }
+
+ .tab-content>div {
+     display: none;
+     padding: 1rem;
+ }
+
+.tab-content>div.active {
+    display: block;
+    margin-top: 70px;
+}
+
+.theme-toggle {
+	display: block;
+	margin: 0 auto 1.5rem;
+	background: #333;
+	color: white;
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 1rem;
+	cursor: pointer;
+}
+
+ @keyframes spin {
+     0% {
+         transform: rotate(0);
+     }
+     100% {
+         transform: rotate(360deg);
+     }
+ }
+
+ @keyframes typing {
+     from {
+         width: 0;
+     }
+ }
+
+ @keyframes draw {
+     from {
+         height: 0;
+         width: 0;
+         opacity: 0;
+     }
+     to {
+         height: 28px;
+         width: 14px;
+         opacity: 1;
+     }
+ }
+
+ @keyframes orbit {
+     0% {
+         transform: rotate(0deg) translateX(100px) rotate(0deg);
+     }
+     100% {
+         transform: rotate(360deg) translateX(100px) rotate(-360deg);
+     }
+ }
+
+ @keyframes rise {
+     to {
+         bottom: 100%;
+         opacity: 0;
+     }
+ }
+
+ @keyframes waveMove {
+     0% {
+         transform: translateX(0);
+     }
+     100% {
+         transform: translateX(-50%);
+     }
+ }
+
+ @keyframes slideCarousel {
+     0% {
+         transform: translateX(0);
+     }
+     100% {
+         transform: translateX(-100%);
+     }
+ }
+
+ @keyframes pulse {
+     0% {
+         transform: scale(1);
+         opacity: 1;
+     }
+     100% {
+         transform: scale(2);
+         opacity: 0;
+     }
+ }
+
+ @keyframes bounce {
+     0%,
+     100% {
+         transform: translateY(0);
+     }
+     50% {
+         transform: translateY(-10px);
+     }
+ }
+
+ .loader {
+     width: 60px;
+     height: 60px;
+     border: 8px solid #ccc;
+     border-top: 8px solid #007bff;
+     border-radius: 50%;
+     animation: spin 1s linear infinite;
+     margin: auto;
+ }
+
+ .typing {
+     overflow: hidden;
+     white-space: nowrap;
+     border-right: 2px solid;
+     animation: typing 4s steps(22) infinite alternate;
+     width: fit-content;
+     font-family: monospace;
+     margin: auto;
+ }
+
+ .orbit-container {
+     position: relative;
+     width: 200px;
+     height: 200px;
+     border: 1px solid currentColor;
+     border-radius: 50%;
+     margin: auto;
+ }
+
+ .planet {
+     position: absolute;
+     width: 20px;
+     height: 20px;
+     background: #00f;
+     border-radius: 50%;
+     top: 50%;
+     left: 50%;
+     transform-origin: -100px center;
+     animation: orbit 5s linear infinite;
+ }
+
+ .carousel {
+     overflow: hidden;
+     width: 100%;
+ }
+
+ .carousel-inner {
+     display: flex;
+     gap: 1rem;
+     animation: slideCarousel 10s linear infinite;
+ }
+
+ .carousel-inner img {
+     width: 200px;
+     height: 120px;
+     object-fit: cover;
+     border-radius: 12px;
+ }
+
+ .pulse-ring {
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     background: rgba(0, 123, 255, 0.5);
+     animation: pulse 1.5s ease-out infinite;
+     margin: auto;
+ }
+
+ .bouncer {
+     display: flex;
+     justify-content: center;
+     gap: 5px;
+ }
+
+ .bouncer span {
+     width: 10px;
+     height: 10px;
+     background: #007bff;
+     border-radius: 50%;
+     animation: bounce 1s infinite;
+ }
+
+ .bouncer span:nth-child(2) {
+     animation-delay: 0.2s;
+ }
+
+ .bouncer span:nth-child(3) {
+     animation-delay: 0.4s;
+ }
+ 
+ 
+/* bouncer ball */
+
+.bouncer_ball {
+    text-align: center;
+} 
+.bounce-out-top {
+	animation: bounce-out-top 1.5s both;
+}
+
+@keyframes bounce-out-top {
+  0% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  5% {
+    transform: translateY(-30px);
+    animation-timing-function: ease-in;
+  }
+  15% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  25% {
+    transform: translateY(-38px);
+    animation-timing-function: ease-in;
+  }
+  38% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  52% {
+    transform: translateY(-75px);
+    animation-timing-function: ease-in;
+  }
+  70% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-800px);
+    opacity: 0;
+  }
+}
+
+/* roll in */
+.roll_in {
+    text-align: center;
+}
+.roll-in-blurred-left {
+	animation: roll-in-blurred-left 0.65s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+@keyframes roll-in-blurred-left {
+  0% {
+    transform: translateX(-1000px) rotate(-720deg);
+    filter: blur(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+
